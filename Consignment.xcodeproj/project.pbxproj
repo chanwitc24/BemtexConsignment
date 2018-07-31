@@ -21,6 +21,10 @@
 		A8AC264520F70EB800FD0C6D /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AC264420F70EB800FD0C6D /* ProductViewController.swift */; };
 		A8AC264720F7103B00FD0C6D /* CustomerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AC264620F7103B00FD0C6D /* CustomerTableViewCell.swift */; };
 		A8AC264920F7338300FD0C6D /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AC264820F7338300FD0C6D /* ProductTableViewCell.swift */; };
+		A8CCC35F20F89CBF00E7B364 /* ConsignmentItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CCC35E20F89CBF00E7B364 /* ConsignmentItemViewController.swift */; };
+		A8CCC36120F89FC600E7B364 /* ConsignmentItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CCC36020F89FC600E7B364 /* ConsignmentItemTableViewCell.swift */; };
+		A8CCC36320F8A23300E7B364 /* ConsignmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CCC36220F8A23300E7B364 /* ConsignmentItem.swift */; };
+		A8DC6AD8210731000006A6BB /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8DC6AD7210731000006A6BB /* iOSDropDown.framework */; };
 		A8E83A6020F618630006C94C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E83A5F20F618630006C94C /* Product.swift */; };
 		A8E83A6220F618720006C94C /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E83A6120F618720006C94C /* Customer.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +47,10 @@
 		A8AC264420F70EB800FD0C6D /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		A8AC264620F7103B00FD0C6D /* CustomerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTableViewCell.swift; sourceTree = "<group>"; };
 		A8AC264820F7338300FD0C6D /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		A8CCC35E20F89CBF00E7B364 /* ConsignmentItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsignmentItemViewController.swift; sourceTree = "<group>"; };
+		A8CCC36020F89FC600E7B364 /* ConsignmentItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsignmentItemTableViewCell.swift; sourceTree = "<group>"; };
+		A8CCC36220F8A23300E7B364 /* ConsignmentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsignmentItem.swift; sourceTree = "<group>"; };
+		A8DC6AD7210731000006A6BB /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8E83A5F20F618630006C94C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		A8E83A6120F618720006C94C /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		CEDC9794162AE6D25A8E8714 /* Pods_Consignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Consignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8DC6AD8210731000006A6BB /* iOSDropDown.framework in Frameworks */,
 				640E0FD227B932DA744A62BE /* Pods_Consignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +83,7 @@
 			children = (
 				A8E83A5F20F618630006C94C /* Product.swift */,
 				A8E83A6120F618720006C94C /* Customer.swift */,
+				A8CCC36220F8A23300E7B364 /* ConsignmentItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,6 +109,8 @@
 				A8269C9E1FCEC6F50015C4B3 /* MainViewController.swift */,
 				A8AC264420F70EB800FD0C6D /* ProductViewController.swift */,
 				A8AC264820F7338300FD0C6D /* ProductTableViewCell.swift */,
+				A8CCC35E20F89CBF00E7B364 /* ConsignmentItemViewController.swift */,
+				A8CCC36020F89FC600E7B364 /* ConsignmentItemTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -137,6 +149,7 @@
 		ED4A5FB102F90CE482E1C0F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A8DC6AD7210731000006A6BB /* iOSDropDown.framework */,
 				CEDC9794162AE6D25A8E8714 /* Pods_Consignment.framework */,
 			);
 			name = Frameworks;
@@ -154,7 +167,6 @@
 				A82C78BB1FCE971C00C0B58B /* Frameworks */,
 				A82C78BC1FCE971C00C0B58B /* Resources */,
 				BEE96D74D8F9D25C2C5ADD4A /* [CP] Embed Pods Frameworks */,
-				C58DECF01DDD2A99E28FE087 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,8 +255,10 @@
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/NumberField/NumberField.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSDropDown/iOSDropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -254,29 +268,16 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NumberField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSDropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Consignment/Pods-Consignment-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C58DECF01DDD2A99E28FE087 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Consignment/Pods-Consignment-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -287,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8AC264320F70E9D00FD0C6D /* CustomerViewController.swift in Sources */,
+				A8CCC35F20F89CBF00E7B364 /* ConsignmentItemViewController.swift in Sources */,
 				A8269C9D1FCEC5CE0015C4B3 /* LoginViewController.swift in Sources */,
 				A8E83A6220F618720006C94C /* Customer.swift in Sources */,
 				A8269C9B1FCEC3530015C4B3 /* RegisterViewController.swift in Sources */,
@@ -295,8 +297,10 @@
 				A82C78C21FCE971C00C0B58B /* AppDelegate.swift in Sources */,
 				A8AC264920F7338300FD0C6D /* ProductTableViewCell.swift in Sources */,
 				A8AC264520F70EB800FD0C6D /* ProductViewController.swift in Sources */,
+				A8CCC36320F8A23300E7B364 /* ConsignmentItem.swift in Sources */,
 				A8269C9F1FCEC6F50015C4B3 /* MainViewController.swift in Sources */,
 				A8E83A6020F618630006C94C /* Product.swift in Sources */,
+				A8CCC36120F89FC600E7B364 /* ConsignmentItemTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
