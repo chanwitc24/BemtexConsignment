@@ -191,8 +191,9 @@ class ConsignmentItemViewController: UIViewController, UITableViewDelegate, UITa
                     let productPrice = productObject?["productPrice"]
                     let productDescription = productObject?["productDescription"]
                     let productStatus = productObject?["productStatus"]
+                    let productImageUrl = productObject?["productImageUrl"]
                     
-                    let product = Product(id:  productId as! String?, name: productName as! String?,key: productKey as! String?,price: productPrice as? Double, description: productDescription as! String?,status: productStatus as? Bool)
+                    let product = Product(id:  productId as! String?, name: productName as! String?,key: productKey as! String?,price: productPrice as? Double, description: productDescription as! String?,status: productStatus as? Bool,imageUrl: productImageUrl as! String?)
                     
                     self.productList.append(product)
                     self.productArray.append("\(product.key!):\(product.name!)")
