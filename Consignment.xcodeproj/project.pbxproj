@@ -27,6 +27,7 @@
 		A8DC6AD8210731000006A6BB /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8DC6AD7210731000006A6BB /* iOSDropDown.framework */; };
 		A8E83A6020F618630006C94C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E83A5F20F618630006C94C /* Product.swift */; };
 		A8E83A6220F618720006C94C /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E83A6120F618720006C94C /* Customer.swift */; };
+		A8EA1F5D2111BD7000B5D0EF /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EA1F5C2111BD7000B5D0EF /* MainTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		A8DC6AD7210731000006A6BB /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8E83A5F20F618630006C94C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		A8E83A6120F618720006C94C /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		A8EA1F5C2111BD7000B5D0EF /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		CEDC9794162AE6D25A8E8714 /* Pods_Consignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Consignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				A8AC264820F7338300FD0C6D /* ProductTableViewCell.swift */,
 				A8CCC35E20F89CBF00E7B364 /* ConsignmentItemViewController.swift */,
 				A8CCC36020F89FC600E7B364 /* ConsignmentItemTableViewCell.swift */,
+				A8EA1F5C2111BD7000B5D0EF /* MainTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				A8CCC35F20F89CBF00E7B364 /* ConsignmentItemViewController.swift in Sources */,
 				A8269C9D1FCEC5CE0015C4B3 /* LoginViewController.swift in Sources */,
 				A8E83A6220F618720006C94C /* Customer.swift in Sources */,
+				A8EA1F5D2111BD7000B5D0EF /* MainTableViewCell.swift in Sources */,
 				A8269C9B1FCEC3530015C4B3 /* RegisterViewController.swift in Sources */,
 				A82C78C41FCE971C00C0B58B /* ViewController.swift in Sources */,
 				A8AC264720F7103B00FD0C6D /* CustomerTableViewCell.swift in Sources */,
