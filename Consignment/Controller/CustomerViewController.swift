@@ -39,6 +39,10 @@ class CustomerViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "gotoCustomerItem", sender: self)
+    }
+    
     @IBAction func btnAddCustomer(_ sender: UIButton) {
         AddCustomer()
     }
@@ -85,8 +89,9 @@ class CustomerViewController: UIViewController, UITableViewDelegate, UITableView
                     let customerAddress = customerObject?["customerAddress"]
                     let customerPhone = customerObject?["customerPhone"]
                     let customerStatus = customerObject?["customerStatus"]
+                    let customerImageUrl = customerObject?["customerImageUrl"]
                     
-                    let customer = Customer(id:  customerId as! String?, name: customerName as! String?, address: customerAddress as! String?,phone: customerPhone as! String?,status: customerStatus as? Bool)
+                    let customer = Customer(id:  customerId as! String?, name: customerName as! String?, address: customerAddress as! String?,phone: customerPhone as! String?,status: customerStatus as? Bool,imageUrl: customerImageUrl as! String?)
                     
                     self.customerList.append(customer)
                 }

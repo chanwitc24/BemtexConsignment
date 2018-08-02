@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		640E0FD227B932DA744A62BE /* Pods_Consignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDC9794162AE6D25A8E8714 /* Pods_Consignment.framework */; };
 		A8269C9B1FCEC3530015C4B3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8269C9A1FCEC3530015C4B3 /* RegisterViewController.swift */; };
-		A8269C9D1FCEC5CE0015C4B3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8269C9C1FCEC5CE0015C4B3 /* LoginViewController.swift */; };
 		A8269C9F1FCEC6F50015C4B3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8269C9E1FCEC6F50015C4B3 /* MainViewController.swift */; };
 		A82C78C21FCE971C00C0B58B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82C78C11FCE971C00C0B58B /* AppDelegate.swift */; };
 		A82C78C41FCE971C00C0B58B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82C78C31FCE971C00C0B58B /* ViewController.swift */; };
@@ -34,7 +33,6 @@
 		32239F08AD640B87ECE2BF54 /* Pods-Consignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Consignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Consignment/Pods-Consignment.debug.xcconfig"; sourceTree = "<group>"; };
 		7460E5B9D332D2ABED1D1A91 /* Pods-Consignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Consignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-Consignment/Pods-Consignment.release.xcconfig"; sourceTree = "<group>"; };
 		A8269C9A1FCEC3530015C4B3 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		A8269C9C1FCEC5CE0015C4B3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A8269C9E1FCEC6F50015C4B3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A82C78BE1FCE971C00C0B58B /* Consignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Consignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A82C78C11FCE971C00C0B58B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 				A8AC264620F7103B00FD0C6D /* CustomerTableViewCell.swift */,
 				A82C78C31FCE971C00C0B58B /* ViewController.swift */,
 				A8269C9A1FCEC3530015C4B3 /* RegisterViewController.swift */,
-				A8269C9C1FCEC5CE0015C4B3 /* LoginViewController.swift */,
 				A8269C9E1FCEC6F50015C4B3 /* MainViewController.swift */,
 				A8AC264420F70EB800FD0C6D /* ProductViewController.swift */,
 				A8AC264820F7338300FD0C6D /* ProductTableViewCell.swift */,
@@ -255,6 +252,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Consignment/Pods-Consignment-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -268,6 +266,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -292,7 +291,6 @@
 			files = (
 				A8AC264320F70E9D00FD0C6D /* CustomerViewController.swift in Sources */,
 				A8CCC35F20F89CBF00E7B364 /* ConsignmentItemViewController.swift in Sources */,
-				A8269C9D1FCEC5CE0015C4B3 /* LoginViewController.swift in Sources */,
 				A8E83A6220F618720006C94C /* Customer.swift in Sources */,
 				A8EA1F5D2111BD7000B5D0EF /* MainTableViewCell.swift in Sources */,
 				A8269C9B1FCEC3530015C4B3 /* RegisterViewController.swift in Sources */,

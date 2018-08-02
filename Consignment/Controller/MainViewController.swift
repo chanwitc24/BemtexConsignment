@@ -9,8 +9,13 @@
 import Foundation
 import Firebase
 import SVProgressHUD
+import Alamofire
+import AlamofireImage
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     
     @IBOutlet weak var tableViewConsignment: UITableView!
     
@@ -32,16 +37,33 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.customerAddress.text = customer.address
         cell.customerPhone.text = customer.phone
         
+        Alamofire.request(customer.imageUrl!).responseImage{ response in
+            debugPrint(response)
+            
+            if let image = response.result.value {
+                cell.customerImage.image = image
+            }
+        }
         
         return cell
     }
     
-    func getAllCustomers(){
+    func getAllCustomers(searhText : String){
         
-        let customerDB = Database.database().reference().child("customers")
+//        let customerDB = Database.database().reference().child("customers")
+        let db = Database.database().reference()
+        let customers = db.child("customers");
+        let query = customers
+                            .queryOrdered(byChild: "customerName")
+                            .queryStarting(atValue: searhText)
+//                            .queryEqual(toValue: "อู่ ช่างวุฒิ")
+                            .queryLimited(toFirst: 10)
         
-        customerDB.observe(.value,with: { (snapshot) in
-            
+        
+        
+//        customerDB.observe(.value,with: { (snapshot) in
+        query.observe(.value,with: { (snapshot) in
+        
             if snapshot.childrenCount > 0 {
                 
                 self.customerList.removeAll()
@@ -54,8 +76,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let customerAddress = customerObject?["customerAddress"]
                     let customerPhone = customerObject?["customerPhone"]
                     let customerStatus = customerObject?["customerStatus"]
+                    let customerImageUrl = customerObject?["customerImageUrl"]
                     
-                    let customer = Customer(id:  customerId as! String?, name: customerName as! String?, address: customerAddress as! String?,phone: customerPhone as! String?,status: customerStatus as? Bool)
+                    let customer = Customer(id:  customerId as! String?, name: customerName as! String?, address: customerAddress as! String?,phone: customerPhone as! String?,status: customerStatus as? Bool,imageUrl: customerImageUrl as! String?)
                     
                     self.customerList.append(customer)
                 }
@@ -69,7 +92,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         getAllCustomers()
+        getAllCustomers(searhText: "")
     }
     
     override func didReceiveMemoryWarning() {
@@ -90,3 +113,32 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
 }
+
+//MARK: - Search bar methods
+
+extension MainViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+//        todoItems = todoItems?.filter("title CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "dateCreated", ascending: true)
+        getAllCustomers(searhText: searchBar.text!)
+        tableViewConsignment.reloadData()
+        
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+//            loadItems()
+            getAllCustomers(searhText: "")
+            
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
+            
+            
+            
+        }
+    }
+    
+}
+

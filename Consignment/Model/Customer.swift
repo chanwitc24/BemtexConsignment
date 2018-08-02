@@ -13,12 +13,14 @@ class Customer {
     var address: String?
     var phone: String?
     var status: Bool?
+    var imageUrl: String?
     
-    init(id: String?, name: String?, address: String?, phone: String?, status: Bool?){
+    init(id: String?, name: String?, address: String?, phone: String?, status: Bool?, imageUrl: String?){
         self.id = id
         self.name = name
         self.address = address
         self.phone = phone
         self.status = status
+        self.imageUrl = imageUrl
     }
 }
