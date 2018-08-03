@@ -10,11 +10,6 @@ import UIKit
 import Firebase
 
 class CustomerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet weak var txtName: UITextField!
-    @IBOutlet weak var txtAddress: UITextField!
-    @IBOutlet weak var txtPhone: UITextField!
-    @IBOutlet weak var switchStatus: UISwitch!
     
     @IBOutlet weak var customerTableView: UITableView!
     
@@ -41,34 +36,6 @@ class CustomerViewController: UIViewController, UITableViewDelegate, UITableView
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "gotoCustomerItem", sender: self)
-    }
-    
-    @IBAction func btnAddCustomer(_ sender: UIButton) {
-        AddCustomer()
-    }
-    
-    func AddCustomer(){
-        let customerDB = Database.database().reference().child("customers")
-        
-        let customer = ["customerName": txtName.text! as String,
-                        "customerAddress": txtAddress.text! as String,
-                        "customerPhone": txtPhone.text! as String,
-                        "customerStatus": switchStatus.isOn as Bool] as [String : Any]
-        
-        customerDB.childByAutoId().setValue(customer){
-            (error, refference) in
-            
-            if error != nil {
-                print(error!)
-            }else{
-                print("Customer saved successfully!")
-                self.txtName.text = ""
-                self.txtAddress.text = ""
-                self.txtPhone.text = ""
-            }
-            
-        }
-        
     }
     
     func getAllCustomers(){
@@ -101,7 +68,6 @@ class CustomerViewController: UIViewController, UITableViewDelegate, UITableView
             }
         })
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
