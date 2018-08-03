@@ -9,19 +9,31 @@
 import UIKit
 import Firebase
 import SVProgressHUD
+import FacebookCore
+import FacebookLogin
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var lblMsg: UILabel!
-    
-    
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let loginButton = LoginButton(readPermissions: [ .publicProfile])
+        loginButton.center = view.center
+        
+        view.addSubview(loginButton)
+        
+        if let accessToken = AccessToken.current {
+            print("User is logged in with access token: \(accessToken)")
+            performSegue(withIdentifier: "goToMain", sender: self)
+        }
+      
     }
 
     override func didReceiveMemoryWarning() {
