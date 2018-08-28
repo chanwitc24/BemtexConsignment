@@ -18,12 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ItunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="sDk-4b-ey6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ItunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="sDk-4b-ey6">
                                 <rect key="frame" x="87" y="194" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sDk-4b-ey6" secondAttribute="bottom" constant="414" id="E2z-Wx-7kp"/>
+                            <constraint firstItem="sDk-4b-ey6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="174" id="IPx-xp-5Ox"/>
+                            <constraint firstItem="sDk-4b-ey6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="SqK-7e-2Jw"/>
+                            <constraint firstItem="sDk-4b-ey6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="d5i-23-s8E"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
